@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styling/destination.css">  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <nav class="topnav">
+
+    <div class="logo">
+      <img src="./assets/shared/logo.svg" alt="">
+    </div>
+
+    <div class="menu-icon">
+      <img class="nav-icons menu-icon" src="./assets/shared/icon-hamburger.svg" alt="">
+    </div>
+
+    <ul class="main-menu">
+      <li><img class="nav-icons close-icon" src="./assets/shared/icon-close.svg" alt=""></li>
+      <li class="navlinks"><a href="index.html"><span aria-hidden="true">00</span> Home</a></li>
+      <li class="navlinks"><a href="destination.html"><span aria-hidden="true">01</span> Destination</a></li>
+      <li class="navlinks"><a href="crew.html"><span aria-hidden="true"> 02</span> Crew</a></li>
+      <li class="navlinks"><a href="technology.html"><span aria-hidden="true">03</span> Technology</a></li>
+
+    </ul>
+  </nav>
+
+  
+
+  <h1 class="cta-h1"><span aria-hidden="true">01</span> Pick your destination</h1>
+  <main > 
+
+  <section class="destination-image">
+    <img src="./assets/destination/image-moon.png" alt="">
+  </section>
+
+  <nav class="destination-nav">
+    <ul class="destination-menu">
+      <li id="moon">Moon</li>
+      <li id="mars">Mars</li>
+      <li id="europa">Europa</li>
+      <li id="titan">Titan</li>
+    </ul>
+  </nav>
+
+  <section class="destination-info">
+    <h2 class="destination-name">moon</h2>
+    <p class="destination-descrpt">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+  </section>
+  
+  <section class="destination-travel">
+    <article >
+      <h1>Avg. distance</h1>
+      <p class="destination-dist">384,400 km</p>
+    </article>
+
+    <article >
+      <h1>Est. travel time</h1>
+      <p class="destination-time">3 days</p>
+    </article>
+  </section>
+</main>
+
+<script type="module" defer src="./javascript/destination.js"></script>
+</body>
+</html>

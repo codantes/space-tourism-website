@@ -1,0 +1,109 @@
+@import './variables';
+@import './navbar';
+
+body{
+    @include backgroudImageDisplay(url('/assets/crew/background-crew-mobile.jpg'));
+    color: white;
+    text-align: center;
+
+    @include view($tablet-width){
+        @include backgroudImageDisplay(url('/assets/crew/background-crew-tablet.jpg'));
+    }
+
+    @include view($desktop-width){
+        @include backgroudImageDisplay(url('/assets/crew/background-crew-desktop.jpg'));
+    }
+}
+
+.page-heading{
+    text-align: center;
+    margin: 2rem 2rem;
+    color: white;
+    font-family: typography(subheading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 26px;
+
+    span{
+        color: gray
+    }
+
+    @include view($tablet-width){
+        text-align: left;
+    }
+}
+
+button{
+    @include roundButton(.3rem);
+}
+
+.crew-img{
+    margin: 0 auto;
+    img{
+        height: 25rem;
+        border-bottom: 2px solid rgba(161, 159, 159, .3);
+        margin: 0 auto;
+    }
+}
+
+button{
+    @include roundButton(.7rem);
+    margin: 1rem .5rem;
+}
+
+.btn-active{
+    background:grey;
+}
+
+main{
+    @include view($tablet-width){
+        @include gridDisplay(1);
+    }
+    
+    @include view($desktop-width){
+        @include gridDisplay(2);
+        margin: 0 3rem;
+    }
+}
+
+.crew-info{
+
+    @include view($tablet-width){
+        grid-row-start: 1;
+    }
+    .crew-role{
+        text-transform: uppercase;
+        color: grey;
+        font-family: typography(heading);
+        font-size: 25px;
+    }
+
+    .crew-name{
+        text-transform: uppercase;
+        font-family: typography(heading);
+        font-size: 35px;
+        margin: 0 2rem;
+    }
+
+    .crew-bio{
+        line-height: 2rem;
+        font-family: typography(para);
+        font-size: 18px;
+        margin: 1rem 2rem;
+    }
+
+    @include view($tablet-width){
+        @include gridDisplay(1);
+    }
+
+    .dots{
+
+        button{
+            cursor:pointer;
+        }
+
+        @include view($tablet-width){
+            grid-row-start: 2;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+/*--importing all the components and variables--*/
+@import "./variables";
+@import "./navbar";
+
+
+/*--Styling for body at different breakpoints--*/
+body {
+  @include backgroundImageDisplay(url('/assets/home/background-home-mobile.jpg'));
+
+  @include view($tablet-width) {
+    @include backgroundImageDisplay(url('/assets/home/background-home-tablet.jpg'));
+  }
+
+  @include view($desktop-width){
+    @include backgroundImageDisplay(url("/assets/home/background-home-desktop.jpg"));
+  }
+}
+
+/*--styling for main for desktop view--*/
+main{
+  @include view($desktop-width){
+    @include gridDisplay(2);  
+  }
+}
+
+/*--styling header for different desktop view--*/
+header {
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+
+  h2 {
+    font-family: typography(subheading);
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: typography(heading);
+    text-transform: uppercase;
+    font-size: 90px;
+    margin: 1rem 2rem;
+  }
+
+  p {
+    font-family: typography(para);
+    font-size: 20px;
+    line-height: 2rem;
+    margin: 1rem 2rem;
+  }
+
+  @include view($desktop-width){
+    text-align: left;
+    margin: 7rem 3rem; 
+  }
+}
+
+/*--styling for explore section for different breakpoints--*/
+.explore {
+  text-align: center;
+
+  button {
+    @include roundButton(13rem);
+    margin: 3rem;
+    transition: all ease 0.3s;
+
+    &:hover {
+      outline: 2.5rem solid rgba(160, 158, 158, 0.3);
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: map-get($fonts, heading);
+      color: black;
+      font-size: 25px;
+    }
+
+    @include view($desktop-width){
+      margin: 9rem 3rem;
+    }
+  }
+}

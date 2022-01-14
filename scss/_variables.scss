@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap");
+
+/*--map to get different font styles--*/
+$fonts: (
+  "para": "Barlow",
+  "subheading": "Barlow Condensed",
+  "heading": "Bellefair",
+);
+
+
+/*--function to get fonts from font map in variable partail--*/
+@function typography($font-style) {
+  @return map-get($fonts, $font-style);
+}
+/*--variables for breakpoints--*/
+$tablet-width: 700px;
+$desktop-width: 900px;
+
+/*--mixin for using media queries--*/
+@mixin view($screenWidth) {
+  @media screen and (min-width:$screenWidth) {
+    @content
+  }
+}
+
+/*--mixin for display flex--*/
+@mixin flexDisplay($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+
+/*--mixin for display grid--*/
+@mixin gridDisplay($columns-count) {
+  display: grid;
+  grid-template-columns: repeat($columns-count, 1fr);
+}
+
+/*--mixin for background config--*/
+@mixin backgroudImageDisplay($image-address) {
+  background-image: $image-address;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/*--mixin for round button--*/
+@mixin roundButton($size){
+  height: $size;
+  width: $size;
+  border-radius: 200px;
+  background: white;
+  border: none;
+}

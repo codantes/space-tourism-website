@@ -1,0 +1,146 @@
+@import './navbar';
+@import './variables';
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    @include backgroudImageDisplay(url('/assets/technology/background-technology-mobile.jpg'));
+
+    @include view($tablet-width){
+        @include backgroudImageDisplay(url('/assets/technology/background-technology-tablet.jpg'));
+    }
+
+    @include view ($desktop-width){
+        @include backgroudImageDisplay(url('/assets/technology/background-technology-desktop.jpg'));
+    }
+}
+
+.page-heading{
+    font-family: typography(subheading);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 26px;
+
+    span{
+        color: grey;
+    }
+
+    @include view($tablet-width){
+        text-align: left;
+        margin: 2rem 2rem;
+    }
+}
+
+.buttons{
+    margin: 1rem auto;
+    text-align: center;
+
+    button{
+        @include roundButton(3rem);
+        margin: 0.5rem;
+        border: 2px solid white;
+        background: none;
+        color: white;
+        font-family: typography(heading);
+        font-size: 18px;
+        transition: all ease 0.3s;
+
+        &:hover{
+            background: white;
+            color:black;
+        }
+
+    }
+    
+    .btn-active{
+        background: white;
+        color: black;
+    }
+
+    @include view($desktop-width){
+        @include flexDisplay(column);
+        justify-content: flex-start;
+        width: 10vw;
+        margin-left: 3rem
+    }
+}
+
+
+.tech-info{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+
+    .tech-img{
+        width:100vw;
+        @include view($desktop-width){
+            width: 45%;
+            position: absolute;
+            right: 0%;
+        }
+
+        img{
+            width:100%;
+        }
+
+        @include view($desktop-width){
+            grid-column-start: 3;
+        }
+    }
+ 
+
+    .tech-name{
+        text-align:center;
+        text-transform: uppercase;
+        color: grey;
+        font-family: typography(subheading);
+        letter-spacing: 2px;
+        margin: 0.5 auto;
+        @include view($desktop-width){
+            text-align:left;
+            margin-left: 5rem;
+        }
+    }
+
+    .tech-vehicle{
+        text-align:center;
+        text-transform: uppercase;
+        color: white;
+        font-family: typography(heading);
+        font-size: 30px;
+        margin: 0 auto;
+        @include view($desktop-width){
+            text-align: left;
+            margin-left: 5rem;
+        }
+    }
+    
+    .tech-descript{
+        margin: 1rem 2rem;
+        line-height: 2rem;
+        font-family: typography(para);
+        color:white;
+        text-align: center;
+        font-size: 18px;
+        @include view($desktop-width){
+            text-align: left;
+            margin-left: 5rem;
+        }
+    }
+
+    @include view($desktop-width){
+        @include gridDisplay(3);
+        grid-template-columns: 10% 30% 60%;
+        gap: 1rem;
+        align-items: baseline;
+        positon: relative;
+    }
+
+}
+

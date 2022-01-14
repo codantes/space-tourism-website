@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap");
+/*--map to get different font styles--*/
+/*--function to get fonts from font map in variable partail--*/
+/*--variables for breakpoints--*/
+/*--mixin for using media queries--*/
+/*--mixin for display flex--*/
+/*--mixin for display grid--*/
+/*--mixin for background config--*/
+/*--mixin for round button--*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap");
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+nav .logo {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  nav .logo {
+    margin: 1rem 4rem;
+  }
+}
+
+nav .menu-icon {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  nav .menu-icon {
+    display: none;
+  }
+}
+
+.main-menu {
+  display: none;
+  list-style-type: none;
+  background: rgba(247, 243, 243, 0.1);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  height: 100%;
+  width: 55%;
+  position: fixed;
+  right: 0%;
+  top: -3%;
+  padding: 0 1rem;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: unset;
+    width: unset;
+    top: -1%;
+    padding: 0rem 1rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-menu {
+    position: unset;
+  }
+}
+
+.main-menu li {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu li {
+    padding-bottom: 2rem;
+  }
+}
+
+.main-menu .navlinks {
+  text-align: left;
+}
+
+.main-menu .navlinks:hover {
+  border-bottom: 2px solid white;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "Barlow";
+  text-transform: uppercase;
+  font-size: 18px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu a {
+    margin-right: 2rem;
+  }
+}
+
+.main-menu a span {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu a span {
+    display: none;
+  }
+}
+
+.main-menu .close-icon {
+  margin-left: 12rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  .main-menu .close-icon {
+    margin-left: 14rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main-menu .close-icon {
+    margin-left: 18rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu .close-icon {
+    display: none;
+  }
+}
+
+.responsive {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+/*--map to get different font styles--*/
+/*--function to get fonts from font map in variable partail--*/
+/*--variables for breakpoints--*/
+/*--mixin for using media queries--*/
+/*--mixin for display flex--*/
+/*--mixin for display grid--*/
+/*--mixin for background config--*/
+/*--mixin for round button--*/
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  background-image: url("/assets/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("/assets/technology/background-technology-desktop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.page-heading {
+  font-family: "Barlow Condensed";
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 26px;
+}
+
+.page-heading span {
+  color: grey;
+}
+
+@media screen and (min-width: 700px) {
+  .page-heading {
+    text-align: left;
+    margin: 2rem 2rem;
+  }
+}
+
+.buttons {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.buttons button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 200px;
+  background: white;
+  border: none;
+  margin: 0.5rem;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  font-family: "Bellefair";
+  font-size: 18px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.buttons button:hover {
+  background: white;
+  color: black;
+}
+
+.buttons .btn-active {
+  background: white;
+  color: black;
+}
+
+@media screen and (min-width: 900px) {
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 10vw;
+    margin-left: 3rem;
+  }
+}
+
+.tech-info {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.tech-info .tech-img {
+  width: 100vw;
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info .tech-img {
+    width: 45%;
+    position: absolute;
+    right: 0%;
+  }
+}
+
+.tech-info .tech-img img {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info .tech-img {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+}
+
+.tech-info .tech-name {
+  text-align: center;
+  text-transform: uppercase;
+  color: grey;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2px;
+  margin: 0.5 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info .tech-name {
+    text-align: left;
+    margin-left: 5rem;
+  }
+}
+
+.tech-info .tech-vehicle {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Bellefair";
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info .tech-vehicle {
+    text-align: left;
+    margin-left: 5rem;
+  }
+}
+
+.tech-info .tech-descript {
+  margin: 1rem 2rem;
+  line-height: 2rem;
+  font-family: "Barlow";
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info .tech-descript {
+    text-align: left;
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .tech-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 10% 30% 60%;
+        grid-template-columns: 10% 30% 60%;
+    gap: 1rem;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    positon: relative;
+  }
+}
+/*# sourceMappingURL=technology.css.map */

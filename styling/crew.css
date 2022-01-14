@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap");
+/*--map to get different font styles--*/
+/*--function to get fonts from font map in variable partail--*/
+/*--variables for breakpoints--*/
+/*--mixin for using media queries--*/
+/*--mixin for display flex--*/
+/*--mixin for display grid--*/
+/*--mixin for background config--*/
+/*--mixin for round button--*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap");
+/*--map to get different font styles--*/
+/*--function to get fonts from font map in variable partail--*/
+/*--variables for breakpoints--*/
+/*--mixin for using media queries--*/
+/*--mixin for display flex--*/
+/*--mixin for display grid--*/
+/*--mixin for background config--*/
+/*--mixin for round button--*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+nav .logo {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  nav .logo {
+    margin: 1rem 4rem;
+  }
+}
+
+nav .menu-icon {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  nav .menu-icon {
+    display: none;
+  }
+}
+
+.main-menu {
+  display: none;
+  list-style-type: none;
+  background: rgba(247, 243, 243, 0.1);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  height: 100%;
+  width: 55%;
+  position: fixed;
+  right: 0%;
+  top: -3%;
+  padding: 0 1rem;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: unset;
+    width: unset;
+    top: -1%;
+    padding: 0rem 1rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-menu {
+    position: unset;
+  }
+}
+
+.main-menu li {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu li {
+    padding-bottom: 2rem;
+  }
+}
+
+.main-menu .navlinks {
+  text-align: left;
+}
+
+.main-menu .navlinks:hover {
+  border-bottom: 2px solid white;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "Barlow";
+  text-transform: uppercase;
+  font-size: 18px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu a {
+    margin-right: 2rem;
+  }
+}
+
+.main-menu a span {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu a span {
+    display: none;
+  }
+}
+
+.main-menu .close-icon {
+  margin-left: 12rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  .main-menu .close-icon {
+    margin-left: 14rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main-menu .close-icon {
+    margin-left: 18rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main-menu .close-icon {
+    display: none;
+  }
+}
+
+.responsive {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+body {
+  background-image: url("/assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("/assets/crew/background-crew-desktop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.page-heading {
+  text-align: center;
+  margin: 2rem 2rem;
+  color: white;
+  font-family: "Barlow Condensed";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 26px;
+}
+
+.page-heading span {
+  color: gray;
+}
+
+@media screen and (min-width: 700px) {
+  .page-heading {
+    text-align: left;
+  }
+}
+
+button {
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 200px;
+  background: white;
+  border: none;
+}
+
+.crew-img {
+  margin: 0 auto;
+}
+
+.crew-img img {
+  height: 25rem;
+  border-bottom: 2px solid rgba(161, 159, 159, 0.3);
+  margin: 0 auto;
+}
+
+button {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 200px;
+  background: white;
+  border: none;
+  margin: 1rem .5rem;
+}
+
+.btn-active {
+  background: grey;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .crew-info {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+}
+
+.crew-info .crew-role {
+  text-transform: uppercase;
+  color: grey;
+  font-family: "Bellefair";
+  font-size: 25px;
+}
+
+.crew-info .crew-name {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  font-size: 35px;
+  margin: 0 2rem;
+}
+
+.crew-info .crew-bio {
+  line-height: 2rem;
+  font-family: "Barlow";
+  font-size: 18px;
+  margin: 1rem 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .crew-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.crew-info .dots button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .crew-info .dots {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+  }
+}
+/*# sourceMappingURL=crew.css.map */
